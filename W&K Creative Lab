@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W&K Creative Lab | Publicidad, Impresión y Material POP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --secondary: #0284c7;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --accent: #38bdf8;
+            --gray: #64748b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--dark);
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(30, 58, 138, 0.9)), url('https://images.unsplash.com/photo-1542744094-3a31243324d0?auto=format&fit=crop&w=1600&q=80') center/cover;
+            color: white;
+            text-align: center;
+            padding: 7rem 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: #cbd5e1;
+        }
+
+        .btn {
+            background-color: var(--secondary);
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--primary);
+        }
+
+        section {
+            padding: 5rem 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.25rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: var(--gray);
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--secondary);
+            margin-top: 1rem;
+        }
+
+        .about {
+            background-color: white;
+        }
+
+        .about-content {
+            display: flex;
+            gap: 4rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            color: var(--gray);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            text-align: center;
+        }
+
+        .step-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-top: 4px solid var(--secondary);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .step-num {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        footer p {
+            color: #94a3b8;
+            margin-top: 1rem;
+        }
+
+        @media(max-width: 768px) {
+            nav {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CABECERA -->
+    <header>
+        <a href="#" class="logo">W&K <span>Creative Lab</span></a>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#catalogo">Catálogo & Precios</a>
+            <a href="#modelo">Modelo</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- SECCIÓN PRINCIPAL (HERO) -->
+    <section id="inicio" class="hero">
+        <h1>Hacemos Visible la Identidad de tu Negocio</h1>
+        <p>Soluciones integrales en publicidad, impresión litográfica, digital, material POP y gran formato de alto impacto.</p>
+        <a href="https://wa.me/573103932708" class="btn" target="_blank">Cotiza en Minutos (WhatsApp)</a>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section class="about" id="modelo">
+        <div class="section-title">
+            <h2>Agencia Intermediaria de Valor Agregado</h2>
+            <p>Estrategia y calidad con red de maquilas en Bogotá (Ricaurte, Paloquemao, 7 de Agosto)[cite: 3]</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>En <strong>W&K Creative Lab</strong> nos especializamos en potenciar la presencia de marcas mediante soluciones publicitarias profesionales. Contamos con dos frentes de dirección expertos:</p>
+                <p><strong>Kevin Alexander Huertas Cujar:</strong> Dirección Comercial, Compras y Finanzas[cite: 3].</p>
+                <p><strong>Wilson Camacho:</strong> Dirección Creativa y de Producción Publicitaria[cite: 3].</p>
+            </div>
+            <div class="about-text" style="background: var(--light); padding: 2rem; border-radius: 8px;">
+                <h3 style="color: var(--primary); margin-bottom: 1rem;">Cobertura y Contacto</h3>
+                <p><strong>Ubicación:</strong> Bogotá - Cundinamarca, Colombia[cite: 4]</p>
+                <p><strong>Teléfono / WhatsApp:</strong> 310-393-2708[cite: 4]</p>
+                <p><strong>Correo:</strong> kevin.huertasc@cun.edu.co[cite: 4]</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS PRINCIPALES -->
+    <section id="servicios">
+        <div class="section-title">
+            <h2>Nuestros Servicios</h2>
+            <p>Rigor técnico y visión creativa en cada proyecto[cite: 4]</p>
+        </div>
+        <div class="grid-4">
+            <div class="card">
+                <h3>01. Impresión & Empaques</h3>
+                <p>Etiquetas y adhesivos en vinilo impermeable, papelería corporativa y tarjetas premium con reserva UV[cite: 1, 4].</p>
+            </div>
+            <div class="card">
+                <h3>02. Merchandising & POP</h3>
+                <p>Línea ejecutiva, mugs termosensibles, sublimación, tampografía, grabado láser, DTF y bordados[cite: 1, 4].</p>
+            </div>
+            <div class="card">
+                <h3>03. Gran Formato & BTL</h3>
+                <p>Pendones, banners eco-solventes, estructuras roll-up y exhibidores holo-display 3D para eventos[cite: 2, 4].</p>
+            </div>
+            <div class="card">
+                <h3>04. Diseño Estratégico</h3>
+                <p>Creación de identidades visuales coherentes, asesoría de marca y validación de artes finales[cite: 3, 4].</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATÁLOGO Y PRECIOS DESTACADOS -->
+    <section id="catalogo" style="background-color: white;">
+        <div class="section-title">
+            <h2>Catálogo y Ofertas Destacadas</h2>
+            <p>Tarifas competitivas y paquetes especiales de lanzamiento</p>
+        </div>
+        <div class="grid-4">
+            <div class="card">
+                <h3>Tarjetas Corporativas</h3>
+                <p>Propalcote 350g, plastificado mate y reserva UV parcial.</p>
+                <div class="price">$75.000 / millar</div>
+            </div>
+            <div class="card">
+                <h3>Mug Chroma</h3>
+                <p>Mug cerámico negro que revela diseño a full color con bebidas calientes.</p>
+                <div class="price">Desde $13.500/ud</div>
+            </div>
+            <div class="card">
+                <h3>Combo Emprendedor Pro</h3>
+                <p>1.000 Tarjetas Mate + UV, 500 Adhesivos Troquelados y 1 Roll-Up.</p>
+                <div class="price">$290.000 COP</div>
+            </div>
+            <div class="card">
+                <h3>Kit Corporativo Premium</h3>
+                <p>25 Mugs, 25 Libretas con esfero láser, 500 Tarjetas y 1 Banner.</p>
+                <div class="price">$680.000 COP</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLUJO DE TRABAJO EN 6 PASOS -->
+    <section>
+        <div class="section-title">
+            <h2>¿Cómo Trabajamos?</h2>
+            <p>De la solicitud a la entrega en seis pasos transparentes[cite: 3]</p>
+        </div>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-num">01</div>
+                <h4>Captación</h4>
+                <p>Recibimos tu requerimiento inicial[cite: 3].</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">02</div>
+                <h4>Costeo</h4>
+                <p>Cotización clara y transparente en COP[cite: 3].</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">03</div>
+                <h4>Anticipo 50%</h4>
+                <p>Iniciamos la producción del proyecto[cite: 3].</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">04</div>
+                <h4>Producción</h4>
+                <p>Fabricación en maquila especializada[cite: 3].</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">05</div>
+                <h4>Control de Calidad</h4>
+                <p>Verificación técnica del producto final[cite: 3].</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">06</div>
+                <h4>Entrega</h4>
+                <p>Saldo restante contra entrega y satisfacción[cite: 3].</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer id="contacto">
+        <h3>W&K Creative Lab</h3>
+        <p>¡Hagamos equipo y hagamos crecer tu marca![cite: 4] Respuesta en menos de 24 horas[cite: 4].</p>
+        <p>Bogotá - Cundinamarca, Colombia | WhatsApp: 310-393-2708 | kevin.huertasc@cun.edu.co[cite: 4]</p>
+    </footer>
+
+</body>
